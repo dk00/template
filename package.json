@@ -1,0 +1,47 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "description": "Build web app with redux, preact, livescript",
+  "scripts": {
+    "pretest": "gulp b",
+    "test": "nyc --instrument false lsc test/start",
+    "posttest": "nyc report -r lcov -r json"
+  },
+  "repository": "dk00/template",
+  "license": "Unlicense",
+  "bugs": "https://github.com/dk00/template/issues",
+  "homepage": "https://github.com/dk00/template#readme",
+  "files": [
+    "www",
+    "server.js"
+  ],
+  "dependencies": {
+    "express": "",
+    "web-push": ""
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "",
+    "babel-plugin-istanbul": "",
+    "babel-plugin-transform-es2015-modules-commonjs": "",
+    "babel-plugin-transform-inline-environment-variables": "",
+    "babel-plugin-transform-react-jsx": "",
+    "babel-preset-babili": "",
+    "babel-preset-stage-0": "",
+    "babel-register": "",
+    "browser-sync": "",
+    "gulp": "",
+    "linking": "",
+    "livescript": "",
+    "livescript-next": "",
+    "node-sass": "",
+    "nyc": "",
+    "preact": "",
+    "preact-render-to-string": "",
+    "redux": "",
+    "rollup": "",
+    "rollup-plugin-babel": "",
+    "rollup-plugin-node-resolve": "",
+    "tape": ""
+  },
+  "private": true
+}

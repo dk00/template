@@ -1,0 +1,12 @@
+{
+  "name": "My Push",
+  "short_name": "My Push",
+  "icons": [{
+    "src": "push-icon.png",
+    "sizes": "111x111",
+    "type": "image/png"
+  }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "gcm_sender_id": "220873737231"
+}
