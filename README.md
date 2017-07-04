@@ -10,7 +10,7 @@ Template project for crafting web apps.
   - [atom](//atom.io) is recommended.
 - Open source files with the text editor
 - Open terminal and change the working directory to root of source files
-- Install `gulp`: `npm i -g gulp`
+- Install `gulp`: `npm i -g gulp-cli`
 - Install required packages: `npm i`
 - Start development server: `gulp`
 - Go to [http://localhost:3000](http://localhost:3000) and start playing!

@@ -8,12 +8,15 @@ import
 function write name, content
   new Promise (resolve) -> write-file name, content, resolve
 
+function format-error {file, line, column, formatted}: error
+  Object.assign error, message: "#{formatted[7 to]}    at #file:#line:#column"
+
 function render-sass options
   new Promise (resolve, reject) ->
     err, result = {} <- sass.render options
     switch
     | /unreadable/test err?message => resolve render-sass options
-    | err => reject that
+    | err => reject format-error err
     | _ => resolve result
 
 function build-style options
