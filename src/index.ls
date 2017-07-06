@@ -6,7 +6,7 @@ import
   \./main : main
 
 function start
-  navigator?service-worker.register \service-worker.js
+  navigator.service-worker?register \service-worker.js
   enhancer = window.__REDUX_DEVTOOLS_EXTENSION__?!
   store = create-store compose-reduce!, preload-state!, enhancer
   seed = link main

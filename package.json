@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "Build web app with redux, preact, livescript",
   "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
     "pretest": "gulp b",
     "test": "nyc --instrument false lsc test/start",
     "posttest": "nyc report -r lcov -r json"
@@ -27,6 +29,7 @@
     "babel-plugin-transform-react-jsx": "",
     "babel-preset-babili": "",
     "babel-preset-stage-0": "",
+    "babel-loader": "",
     "babel-register": "",
     "browser-sync": "",
     "gulp": "",
@@ -41,7 +44,9 @@
     "rollup": "",
     "rollup-plugin-babel": "",
     "rollup-plugin-node-resolve": "",
-    "tape": ""
+    "tape": "",
+    "webpack": "",
+    "webpack-dev-server": ""
   },
   "private": true
 }
