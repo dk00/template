@@ -1,5 +1,6 @@
 path = require \path
-target-path = path.join __dirname, \www
+webpack = require \webpack
+public-path = path.join __dirname, \www
 
 export
   entry: \./src/index.ls
@@ -23,5 +24,5 @@ export
     ...
 
   dev-server:
+    content-base: public-path
     hot: true
-    public-path: \www

@@ -10,9 +10,12 @@ Template project for crafting web apps.
   - [atom](//atom.io) is recommended.
 - Open source files with the text editor
 - Open terminal and change the working directory to root of source files
-- Install `gulp`: `npm i -g gulp-cli`
+- Remove existing `node-sass`: `npm r node-sass`
 - Install required packages: `npm i`
-- Start development server: `gulp`
+- Start development server: `npm run dev`
+- Install Redux DevTools to update store state when replacing the reducer.
+  - [Chrome](//chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+  - [Firefox](//addons.mozilla.org/firefox/addon/remotedev/)
 - Go to [http://localhost:3000](http://localhost:3000) and start playing!
 
 # Stuff
