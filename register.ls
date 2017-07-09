@@ -1,10 +1,12 @@
-jsx = [\transform-react-jsx pragma: \h use-built-ins: true]
-function register plugins=[]
+default-options =
+  plugins: [\transform-es2015-modules-commonjs]
+  extensions: <[.ls .jsx]>
+
+function register options={}
   require \livescript
   delete require.extensions\.ls
-  options = require \./.babelrc.js
-  require \babel-register <| Object.assign {} options,
-    plugins: plugins ++ [\transform-es2015-modules-commonjs] ++ options.plugins
-    extensions: <[.ls .jsx]>
+  option-list = [default-options, require \./.babelrc; options]
+  require \babel-register <| Object.assign {} ...option-list,
+    plugins: []concat ...option-list.map (.plugins || [])
 
 module.exports = register

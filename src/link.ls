@@ -4,14 +4,11 @@ import
 
 function class-creator Component => (proto) ->
   function ctor =>
-  properties = Object.keys proto .map (key) ->
-    (key): {value: proto[key], +writable, +configurable}
-  ctor:: = Object.create Component::,
-    Object.assign constructor: ctor, ...properties
-  ctor
+  ctor:: = Object.assign (Object.create Component::), proto,
+     constructor: ctor
+  Object.assign ctor, proto{display-name}
 
 create-class = class-creator Component
 link = create-link {create-class, create-element: h, PropTypes: any: true}
 
 export {default: link, link, h, render}
-
