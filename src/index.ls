@@ -18,6 +18,7 @@ function start
   init main
 
   if module.hot
+    require \../style/index.sass
     require \preact/devtools
     that.accept \./src/reduce.ls ->
       store.replace-reducer <| require \./reduce .default!

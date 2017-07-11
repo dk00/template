@@ -9,10 +9,9 @@ export
     rules:
       * test: /\.(ls|jsx)$/
         exclude: /node_modules/
-        use:
-          loader: \babel-loader
-          options: require \./.babelrc
-      ...
+        use: loader: \babel-loader options: require \./.babelrc
+      * test: /\.sass$/
+        use: <[style-loader css-loader sass-loader]>
 
   resolve:
     extensions: [\.ls \.jsx \.js]
@@ -20,7 +19,7 @@ export
   devtool: \cheap-eval-source-map
 
   plugins:
-    * new webpack.HotModuleReplacementPlugin
+    new webpack.HotModuleReplacementPlugin
     ...
 
   dev-server:

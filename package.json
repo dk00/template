@@ -32,6 +32,8 @@
     "babel-loader": "",
     "babel-register": "",
     "browser-sync": "",
+    "css-loader": "",
+    "file-loader": "",
     "gulp": "",
     "linking": "",
     "livescript": "",
@@ -44,6 +46,8 @@
     "rollup": "",
     "rollup-plugin-babel": "",
     "rollup-plugin-node-resolve": "",
+    "sass-loader": "",
+    "style-loader": "",
     "tape": "",
     "webpack": "",
     "webpack-dev-server": ""
