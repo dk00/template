@@ -16,7 +16,10 @@ Template project for crafting web apps.
 - Install Redux DevTools to update store state when replacing the reducer.
   - [Chrome](//chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
   - [Firefox](//addons.mozilla.org/firefox/addon/remotedev/)
-- Go to [http://localhost:3000](http://localhost:3000) and start playing!
+- Install React Developer Tools
+  - [Chrome](//chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+  - [Firefox](//addons.mozilla.org/zh-TW/firefox/addon/react-devtools/)
+- Go to [http://localhost:8080](http://localhost:8080) and start playing!
 
 # Stuff
 
@@ -25,13 +28,12 @@ WIP
 - TODO: [offline support](//medium.com/ibm-watson-data-lab/offline-first-whats-in-a-name-89c410910694)
 - redux
 - preact
-- ES module (by rollup)
+- ES module (by webpack)
 - PWA
 - livescript
 - JSX
 - sass
-- gulp
-- browser-sync
+- webpack dev server with redux, react HMR
 - express
 - Web push
 - tape

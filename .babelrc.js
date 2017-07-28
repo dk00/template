@@ -3,10 +3,8 @@ module.exports = {
     parser: 'livescript-next'
   },
   presets: ['stage-0'],
-  plugins: [[
-    'transform-react-jsx', {
-      pragma: 'h',
-      useBuiltIns: true
-    }
-  ]]
+  plugins: [
+    'transform-component-name',
+    ['transform-react-jsx', { pragma: 'h', useBuiltIns: true } ],
+  ]
 }

@@ -3,10 +3,10 @@ import \./link : {link, h}
 function counter-state
   it.counter
 
-function counter-props state, dispatch
+function counter-props state, bind-action
   Object.assign {} state,
-    inc: -> dispatch type: \inc
-    dec: -> dispatch type: \dec
+    inc: bind-action type: \inc
+    dec: bind-action type: \dec
 
 function render-counter {inc, dec, value=\?}
   h \div,,

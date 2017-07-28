@@ -1,6 +1,6 @@
 import
   redux: {create-store}
-  \./link : {link, render}
+  \./link : {link, h, render}
   \./reduce : compose-reduce
   \./preload-state : preload-state
   \./main : main
@@ -14,11 +14,12 @@ function start
   container = document.query-selector \#root
   init = ->
     seed = link it
-    root := render (seed {store}), container, root
+    app = h seed, {store}
+    root := render app, container, root
   init main
 
   if module.hot
-    require \../style/index.sass
+    require \../style/index
     require \preact/devtools
     that.accept \./src/reduce.ls ->
       store.replace-reducer <| require \./reduce .default!
