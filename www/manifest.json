@@ -1,12 +1,13 @@
 {
-  "name": "My Push",
-  "short_name": "My Push",
+  "name": "Template",
+  "short_name": "Template",
+  "theme_color": "#000",
+  "background_color": "#000",
   "icons": [{
-    "src": "push-icon.png",
-    "sizes": "111x111",
-    "type": "image/png"
+    "src": "homescreen.png",
+    "sizes": "512x512"
   }],
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "gcm_sender_id": "220873737231"
 }
