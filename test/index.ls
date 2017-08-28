@@ -1,7 +1,10 @@
 import tape: test
 
+cases = {}
+
 function main
-  test \test (t) ->
-    t.end!
+  Object.entries cases .for-each ([path, name]) ->
+    fn = require "./#path" .default
+    test name, fn
 
 main!

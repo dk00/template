@@ -3,11 +3,12 @@
   "version": "0.0.2",
   "description": "Build web app with redux, preact, livescript",
   "scripts": {
-    "build": "webpack",
     "dev": "webpack-dev-server",
-    "pretest": "gulp b",
+    "build": "webpack",
+    "pretest": "npm run build",
     "test": "nyc --instrument false lsc test/start",
-    "posttest": "nyc report -r lcov -r json"
+    "posttest": "nyc report -r lcov -r json",
+    "deploy": "npm test && firebase deploy"
   },
   "repository": "dk00/template",
   "license": "Unlicense",
@@ -29,8 +30,8 @@
     "babel-plugin-transform-es2015-modules-commonjs": "",
     "babel-plugin-transform-inline-environment-variables": "",
     "babel-plugin-transform-react-jsx": "",
-    "babel-preset-babili": "",
     "babel-preset-stage-0": "",
+    "babel-minify-webpack-plugin": "",
     "babel-register": "",
     "css-loader": "",
     "file-loader": "",
@@ -45,7 +46,8 @@
     "style-loader": "",
     "tape": "",
     "webpack": "",
-    "webpack-dev-server": ""
+    "webpack-dev-server": "",
+    "workbox-webpack-plugin": ""
   },
   "private": true
 }

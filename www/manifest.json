@@ -4,10 +4,10 @@
   "theme_color": "#000",
   "background_color": "#000",
   "icons": [{
-    "src": "homescreen.png",
+    "src": "favico.png",
     "sizes": "512x512"
   }],
-  "start_url": "/",
+  "start_url": "/?utm_source=homescreen",
   "display": "standalone",
   "gcm_sender_id": "220873737231"
 }
