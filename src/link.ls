@@ -4,4 +4,11 @@ import
 
 link = create-link {Component}
 
-export {default: link, link, h, render}
+function mount {
+  store=mount.store, component, container=document.query-selector \#root
+}
+  app = h (link component), {store}
+  mount.store = store
+  mount.root = render app, container, mount.root
+
+export {default: link, link, h, render, mount}

@@ -5,6 +5,6 @@ module.exports = {
   presets: ['stage-0'],
   plugins: [
     'transform-component-name',
-    ['transform-react-jsx', { pragma: 'h', useBuiltIns: true } ],
+    ['transform-react-jsx', { pragma: 'h', useBuiltIns: true } ]
   ]
 }
