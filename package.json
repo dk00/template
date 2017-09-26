@@ -6,7 +6,7 @@
     "dev": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack",
     "pretest": "npm run build",
-    "test": "nyc --instrument false lsc test/start",
+    "test": "nyc --instrument false lsc test",
     "posttest": "nyc report -r lcov -r json",
     "deploy": "npm t && firebase deploy"
   },
@@ -25,11 +25,9 @@
   "devDependencies": {
     "babel-loader": "",
     "babel-minify-webpack-plugin": "",
-    "babel-plugin-external-helpers": "",
     "babel-plugin-istanbul": "",
     "babel-plugin-transform-component-name": "",
     "babel-plugin-transform-es2015-modules-commonjs": "",
-    "babel-plugin-transform-inline-environment-variables": "",
     "babel-plugin-transform-react-jsx": "",
     "babel-preset-stage-0": "",
     "babel-register": "",
@@ -44,11 +42,11 @@
     "node-sass": "",
     "nyc": "",
     "preact": "",
-    "preact-render-to-string": "",
     "redux": "",
     "style-loader": "",
     "sass-loader": "",
     "tape": "",
+    "vhtml": "",
     "webpack": "",
     "webpack-dev-server": "",
     "workbox-webpack-plugin": ""

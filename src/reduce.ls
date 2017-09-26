@@ -1,6 +1,4 @@
-import
-  redux: {combine-reducers}
-  linking: {handle-actions}
+import \./vendor : {combine-reducers, handle-actions}
 
 empty = {}
 

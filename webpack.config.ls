@@ -54,7 +54,7 @@ env-options =
 
     entry:
       main: \./src/index.ls
-      vendor: <[redux preact linking]>
+      vendor: \./src/vendor.ls
     output:
       path: public-path
       filename: '[name].js'
@@ -66,6 +66,8 @@ env-options =
       new WorkboxPlugin options =
         sw-dest: "#public-path/sw.js"
         navigate-fallback: \/
+        glob-patterns: ['**\/*']
+        glob-ignores: '**\/*.map'
         manifest-transforms: [include-start]
       new MinifyPlugin
 

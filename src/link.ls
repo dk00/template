@@ -1,8 +1,6 @@
-import
-  preact: {h, Component, render}
-  linking: create-link
+import \./vendor : {h, Component, render, link: compose-link}
 
-link = create-link {Component}
+link = compose-link {Component}
 
 function mount {
   store=mount.store, component, container=document.query-selector \#root

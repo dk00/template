@@ -1,10 +1,7 @@
-import tape: test
+units = {}
 
-cases = {}
-
-function main
-  Object.entries cases .for-each ([path, name]) ->
-    fn = require "./#path" .default
-    test name, fn
-
-main!
+require \../register <| plugins: <[istanbul]>
+require! tape: test
+list = if process.argv.2 then that.split ' ' else  Object.keys units
+list.for-each (name) ->
+  test units[name] || name, (require "./#name" .default)

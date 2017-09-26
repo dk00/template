@@ -5,6 +5,7 @@ import
   \./main : main
 
 function start
+  navigator.service-worker?register \/sw.js
   if module.hot
     require \preact/devtools
     module.hot.accept \./main ->

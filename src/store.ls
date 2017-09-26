@@ -1,5 +1,5 @@
 import
-  redux: {create-store}
+  \./vendor : {create-store}
   \./reduce : compose-reduce
   \./preload-state : preload-state
 
