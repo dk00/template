@@ -7,6 +7,7 @@ function mount {
 }
   app = h (link component), {store}
   mount.store = store
-  mount.root = render app, container, mount.root
+  mount.root = render app, container,
+  mount.root || container.first-element-child
 
 export {default: link, link, h, render, mount}

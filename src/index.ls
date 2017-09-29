@@ -7,9 +7,9 @@ import
 function start
   navigator.service-worker?register \/sw.js
   if module.hot
-    require \preact/devtools
+    require \preact/debug
     module.hot.accept \./main ->
       mount <| component: require \./main .default
-  mount store: setup-store!, component: main
+  mount component: main, store: setup-store window
 
 start!

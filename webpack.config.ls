@@ -24,9 +24,14 @@ base =
             ...style-loaders
   resolve: extensions: <[.ls .jsx .js .sass]>
 
+require \./register <| {}
+html-options =
+  title: \Template content: require \./src/render-app .default
+  theme-color: try require \./www/manifest.json .theme_color
+
 base-plugins =
   new webpack.NamedModulesPlugin
-  new HtmlPlugin title: \Template
+  new HtmlPlugin html-options
 
 start-list = [\/ \/?utm_source=homescreen]
 function include-start

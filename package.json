@@ -42,11 +42,11 @@
     "node-sass": "",
     "nyc": "",
     "preact": "",
+    "preact-render-to-string": "",
     "redux": "",
-    "style-loader": "",
     "sass-loader": "",
+    "style-loader": "",
     "tape": "",
-    "vhtml": "",
     "webpack": "",
     "webpack-dev-server": "",
     "workbox-webpack-plugin": ""
