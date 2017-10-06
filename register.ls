@@ -1,6 +1,7 @@
 default-options =
   plugins: [\transform-es2015-modules-commonjs]
-  extensions: <[.ls .jsx]>
+  extensions: <[.ls .jsx .js]>
+  ignore: -> /node_modules/test it and !/linking/test it
 
 function register options={}
   require \livescript

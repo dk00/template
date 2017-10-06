@@ -1,4 +1,1 @@
-export
-  redux: {create-store, combine-reducers}
-  preact: {h, Component, render}
-  linking: {link, handle-actions}
+import \linking/preact : {start-app, link, h}

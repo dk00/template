@@ -26,7 +26,7 @@ base =
 
 require \./register <| {}
 html-options =
-  title: \Template content: require \./src/render-app .default
+  title: \Template content: require \./src/render-static .default
   theme-color: try require \./www/manifest.json .theme_color
 
 base-plugins =
@@ -48,7 +48,7 @@ env-options =
       content-base: public-path
       hot: true
       history-api-fallback: true
-      open: true open-page: ''
+      host: \0.0.0.0
 
   production: ->
     MinifyPlugin = require \babel-minify-webpack-plugin

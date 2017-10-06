@@ -14,6 +14,10 @@ function render-counter {inc, dec, value=\?}
     value
     h \button on-click: inc, \+
 
-Counter = link render-counter, counter-state, counter-props
+counter = link render-counter, counter-state, counter-props
 
-export default: Counter
+reduce =
+  inc: ({value=0}) -> value: value + 1
+  dec: ({value=0}) -> value: value - 1
+
+export {default: counter, reduce}
