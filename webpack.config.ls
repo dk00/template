@@ -6,22 +6,21 @@ env = if process.argv.slice 1 .join ' ' .includes \webpack-dev-server
   \development
 else \production
 
-style-loaders = <[css-loader sass-loader]>map ->
-  loader: it, options: source-map: true minimize: env == \production
+style-file = if env == \production
+  * * loader: \file-loader options: name: '[name].css'
+    \extract-loader
+else [\style-loader]
+style-options = source-map: true minimize: env == \production
 
 base =
   entry: \./src/index.ls
-  module:
-    rules:
-      * test: /\.(ls|jsx|js)$/
-        exclude: /node_modules/
-        use: loader: \babel-loader options: require \./.babelrc
-      * test: /\.sass$/
-        use: if env != \production then [\style-loader]concat style-loaders
-        else
-          * * loader: \file-loader options: name: '[name].css'
-            \extract-loader
-            ...style-loaders
+  module: rules:
+    * use: \babel-loader
+      test: /\.(ls|jsx|js)$/
+      exclude: /node_modules/
+    * test: /\.sass$/
+      use: style-file.concat <[css-loader sass-loader]>map ->
+        loader: it, options: style-options
   resolve: extensions: <[.ls .jsx .js .sass]>
 
 require \./register <| {}

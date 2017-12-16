@@ -7,9 +7,9 @@ import
 
 function start
   store = start-app {reducers, preload, component: main}
-  navigator.service-worker?register \/sw.js
+  navigator.service-worker?register \/sw.js if !module.hot
   if module.hot
-    require \preact/debug
+    require \preact/devtools
     module.hot.accept \./reduce -> store.replace-reducer reducers
     module.hot.accept \./main -> store.replace-app main
 
