@@ -5,9 +5,13 @@ coverage
 .nyc_output
 www
 dist
+build
 server.js
 .firebase
 .firebaserc
 stats.json
 tmp
 .DS_Store
+
+# Local Netlify folder
+.netlify

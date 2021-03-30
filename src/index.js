@@ -1,8 +1,14 @@
-import {h, stackProvider, startApp, enableHMR} from 'web-app-tools'
+import {h, render} from 'preact'
 import app from './app'
 
-const wrapped = module.hot? enableHMR(app, replaceApp =>
-  module.hot.accept('./app', () => replaceApp(app))
-): app
+const renderApp = () => render(h(app), document.querySelector('#root'))
 
-startApp(() => h(stackProvider, {}, h(wrapped)))
+if (module.hot) {
+  module.hot.accept('./app', renderApp)
+}
+
+renderApp()
+
+if (!module.hot) {
+    navigator.serviceWorker?.register('/service-worker.js')
+}
